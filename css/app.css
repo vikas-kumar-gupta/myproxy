@@ -1,0 +1,380 @@
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#title {
+    font-size: 40px;
+}
+
+#logo {
+        height: 60px;
+        width: 60px;
+}
+
+.main-red {
+    background-color: #ef476f;
+}
+.main-text-red {
+    color: #ef233c;;
+}
+
+.main-blue {
+    background-color: #118ab2;
+}
+.main-text-blue {
+    color: #118ab2;
+}
+
+.main-green {
+    background-color: #06d6a0;
+}
+.main-text-green {
+    color: #06d6a0;
+}
+
+.main-yellow {
+    background-color: #ffd166;
+}
+.main-text-yellow {
+    color: #ffd166;
+}
+
+.main-dark-blue {
+    background-color: #073b4c;
+}
+.main-text-dark-blue {
+    color: #073b4c;
+}
+
+td {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+td:nth-of-type(3) {
+    font-weight: 700;
+}
+
+#top-attendance-circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(199, 193, 193, 0.775), -5px -5px 10px rgba(199, 193, 193, 0.775);
+}
+#top-attendance-circle p {
+    color: #073b4c;
+    font-size: 43px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td:nth-of-type(2) {
+    padding-left: 10px;
+}
+
+.attendance-circle{
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    background-color: #06d6a0;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(199, 193, 193, 0.775), -5px -5px 10px rgba(199, 193, 193, 0.775);
+}
+
+.attendance-circle p {
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subject {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: -5px -5px 10px rgba(223, 218, 218, 0.618), 5px 5px 10px rgba(223, 218, 218, 0.618);
+    transition: all 0.4s;
+    padding: 10px;
+    
+}
+
+.subject:hover {
+    box-shadow: -10px -10px 7px rgba(199, 193, 193, 0.775), 10px 10px 7px rgba(199, 193, 193, 0.775);
+}
+
+.inner-8 p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.option-circle {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    transition: all 0.3s;
+}
+
+.option-circle:hover {
+    box-shadow: 5px 5px 5px rgba(199, 193, 193, 0.775), -5px -5px 5px rgba(199, 193, 193, 0.775);
+    cursor:pointer;
+}
+
+.option-circle p {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subject h3 {
+    font-size: 25px;
+}
+
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#social-media li{
+    display: flex;
+    float: right;
+    justify-content: flex-end;
+    font-size: 27px;
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+#social-media li:hover {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #logo {
+        height: 55px;
+        width: 55px;
+    }
+
+    #title {
+        font-size: 35px;
+    }
+
+    td {
+        font-size: 20px;
+    }
+
+    #note {
+        font-size: 23px;
+    }
+
+    .inner-8 p {
+    font-size: 16px;
+    font-weight: 500;
+    }
+
+    .option-circle {
+        height: 30px;
+        width: 30px;
+    }
+
+    .option-circle p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    #logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    #title {
+        font-size: 30x;
+    }
+
+    #note {
+        font-size: 20px;
+    }
+
+    .subject {
+        width: 97%;
+    }
+
+    .attendance-circle {
+        height: 80px;
+        width: 80px;
+    }
+
+    .attendance-circle p {
+        font-size: 23px;
+    }
+
+    .inner-8 p {
+    font-size: 15px;
+    font-weight: 500;
+    }
+
+    .inner-8 h2 {
+        font-size: 20px;
+    }
+
+    .inner-8 h5 {
+        font-size: 17px;
+    }
+
+    .option-circle {
+        height: 21px;
+        width: 21px;
+    }
+
+    .option-circle p {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    #logo {
+        height: 53px;
+        width: 53px;
+    }
+
+    #title {
+        font-size: 25px;
+    }
+
+    td {
+        font-size: 16px;
+    }
+
+    #note {
+        font-size: 16px;
+    }
+
+    #top-attendance-circle {
+        height: 120px;
+        width: 120px;
+    }
+
+    #top-attendance-circle p {
+        font-size: 35px;
+    }
+
+    .attendance-circle {
+        height: 50px;
+        width: 50px;
+    }
+
+    .attendance-circle p {
+        font-size: 14px;
+    }
+
+    .inner-8 p {
+        font-size: 12px;
+    }
+
+    .inner-8 h5 {
+        font-size: 14px;
+    }
+
+    .inner-8 h2 {
+        font-size: 15px;
+    }
+
+    .option-circle {
+        float:none;
+        display:flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .option-circle p {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    #logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    #title {
+        font-size: 25px;
+    }
+
+    #top-attendance-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    #top-attendance-circle p {
+        font-size: 23px;
+    }
+    .inner-8 p {
+    font-size: 16px;
+    font-weight: 500;
+    }
+
+    .inner-8 h2 {
+        font-size: 25px;
+    }
+
+    .inner-8 h5 {
+        font-size: 15px;
+    }
+    .attendance-circle {
+        height: 85px;
+        width: 85px;
+    }
+
+    .attendance-circle p {
+        font-size: 24px;
+    }
+    .option-circle {
+        height: 25px;
+        width: 25px;
+        float: left;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .option-circle p {
+        font-size: 20px;
+    }
+
+    #social-media li {
+        font-size: 20px;
+    }
+    #social-media li:hover {
+        font-size: 19px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

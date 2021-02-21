@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP v4.6  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/890fd34ac4.js" crossorigin="anonymous"></script>
+
+    <title>My Attendance</title>
+</head>
+
+<body>
+
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+            <div class="container">
+                <a class="navbar-brand" id="title" href="index.html" style="font-family: 'Courgette', cursive;">
+                    <img src="img/logo/logo.png" alt="" class="d-inline-block align-center" id="logo">
+
+                    My Proxy
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link active" href="attendance.html">Attendance</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" href="#">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="jumbotron mt-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-8">
+                                <table>
+                                    <tr>
+                                        <td><i class="far fa-flag main-text-red"></i></td>
+                                        <td>Goal</td>
+                                        <td class="main-text-red">75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa-arrow-alt-circle-right main-text-green"></i></td>
+                                        <td class="pr-5">Overall Attendance</td>
+                                        <td id="global-percentage">0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-chalkboard-teacher main-text-blue"></i></td>
+                                        <td>Total Classes</td>
+                                        <td id="global-classes">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa-thumbs-up text-success"></i></td>
+                                        <td>Total Present</td>
+                                        <td id="global-present">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="far fa-thumbs-down main-text-red"></i></td>
+                                        <td>Total Absent</td>
+                                        <td id="global-absent">0</td>
+                                    </tr>
+                                </table>
+                                <h3 class="mt-2" id="note"></h3>
+                            </div>
+                            <div class="col-4">
+                                <div id="top-attendance-circle">
+                                    <p id="global-percentage-circle">0%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <div class="row">
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Discrete Mathematics
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s1-attendance">
+                                            0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s1-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <div id="s1-status">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s1-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+                                        <div class="option-circle main-green" id="s1-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s1-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s1-class-cancle">
+                                            <p>C</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Design & Analysis of Algorithm
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s2-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s2-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s2-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green " id="s2-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s2-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s2-class-cancle">
+                                            <p>C</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Java Programming
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s3-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s3-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s3-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green" id="s3-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s3-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s3-class-cancle">
+                                            <p>C</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Computer Organization
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s4-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s4-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s4-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green " id="s4-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s4-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s4-class-cancle">
+                                            <p>C</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Database Management System
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s5-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s5-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s5-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green " id="s5-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s5-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s5-class-cancle">
+                                            <p>C</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Java Lab
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s6-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s6-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s6-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green " id="s6-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s6-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s6-class-cancle">
+                                            <p>C</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">DBMS Lab
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s7-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s7-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s7-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green " id="s7-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s7-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s7-class-cancle">
+                                            <p>C</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 mt-2 mb-2">
+                        <div class="subject">
+                            <div class="row">
+                                <div class="col-8 inner-8">
+                                    <p class="bg-light border-left border-info pl-3 p-21">Power Point Presentation
+                                    </p>
+                                    <div>
+                                        <h5 class="text-info font-weight-bold pl-3">Attendance</h5>
+                                        <h2 class="font-weight-bolder text-danger pl-4" id="s8-attendance">0/0</h2>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar progress-bar-striped bg-success" id="s8-progress"
+                                            role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 inner-4">
+
+                                    <div class="attendance-circle text-dark">
+                                        <p id="s8-percent">0%</p>
+                                    </div>
+                                    <div class="mt-2 text-light">
+
+                                        <div class="option-circle main-green " id="s8-present">
+                                            <p>P</p>
+                                        </div>
+                                        <div class="option-circle main-red " id="s8-absent">
+                                            <p>A</p>
+                                        </div>
+                                        <div class="option-circle main-blue " id="s8-class-cancle">
+                                            <p>C</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="mt-5">
+        <section>
+            <div class="bg-dark">
+                <div class="col-12 pb-2" id="social-media">
+                    <ul class="text-left" style="list-style-type: none;">
+                        <li class="pt-2"><a href="https://www.instagram.com/_avikal_/" target="_blank"><i
+                                    class="fab fa-instagram m-2" aria-hidden="true"></i></a></li>
+                        <li class="pt-2"><a href="https://www.facebook.com/profile.php?id=100010211461888"
+                                target="_blank"><i class="fab fa-facebook-f m-2" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="pt-2"><a href="https://twitter.com/_Avikal_" target="_blank"><i
+                                    class="fab fa-twitter m-2" aria-hidden="true"></i></a></li>
+                        <li class="pt-2"><a href="https://github.com/AvikalGupta" target="_blank"><i
+                                    class="fab fa-github m-2" aria-hidden="true"></i></a></li>
+                        <li class="pt-2"><a href="https://www.linkedin.com/in/vikas-kumar-gupta-05332b15a/"
+                                target="_blank"><i class="fab fa-linkedin m-2" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <p class="text-white pt-5">Copyright &copy; <a href="index.html">My Proxy</a></p>
+                    <p class="text-white">Design & devloped by: <a
+                            href="https://www.linkedin.com/in/vikas-kumar-gupta-05332b15a/" target="_blank"
+                            target="_blank" target="_blank"><i class="fab fa-linkedin m-2" aria-hidden="true"></i>Vikas
+                            Kumar Gupta</a></p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+
+</body>
+
+<script src="js/script.js"></script>
+
+<!-- BOOTSTRAP SCRIPT v4.6 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+</html>
